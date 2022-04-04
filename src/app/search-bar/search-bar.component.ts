@@ -1,3 +1,4 @@
+import { IpMapService } from './../ip-map.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ipMapService:IpMapService) { }
+  title = 'Get Geolocation';
+  ip:any;
+  latitude:any;
+  longitude:any;
+  isp:string = '';
+  city:string = '';
+  country:string = '';
+  timezone: string = '';
 
   ngOnInit(): void {
+    this.getLocation();
+  }
+  private getLocation(){
+    
   }
 
 }

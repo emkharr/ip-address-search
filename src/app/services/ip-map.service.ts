@@ -20,9 +20,9 @@ export class IpMapService {
           // );
   } 
 
-   getGEOLocation(ip: any) {
+  public getGEOLocation(ip: any) {
   // Update your api key to get from https://ipgeolocation.io
-  let url = "https://api.ipgeolocation.io/ipgeo?apiKey=at_HWYtXxZKqAuw6N1Yl9NAJ6HnFLzqb&ip="+ip; 
+  let url = ""+ip; 
     return this.http
           .get(url)
           // .pipe(

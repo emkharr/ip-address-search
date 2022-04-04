@@ -1,4 +1,3 @@
-import { IpMapService } from './../ip-map.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,19 +8,38 @@ import { Component, OnInit } from '@angular/core';
 export class DisplayComponent implements OnInit {
 
    constructor(
-      private ipMapService:IpMapService
+      
    ){ };
-
-   title = 'Get client IP';
-  clientIP:string = '';
 
    ngOnInit(){
 
-      this.getIp();
+      
    }
-   getIp (){
-     this.ipMapService.getIpAddress().subscribe((res:any)=>{
-       this.clientIP=res.ip
-     })
-   }
+  //  getLocation (){
+
+  //     this.ipMapService.getIpAddress().subscribe(res => {
+   
+  //       this.ipaddress = res['ip'];
+  //       this.ip.getGEOLocation(this.ipaddress).subscribe(res => {
+   
+  //         this.latitude = res.location['latitude'];
+  //         this.longitude = res.location['longitude'];
+  //         this.currency = res['currency']['code'];
+  //         this.currencysymbol = res['currency']['symbol'];
+  //         this.city = res['city'];
+  //         this.country = res['country_code3'];
+  //         this.isp = res['isp'];
+  //         console.log(res);
+  //       });
+  //    )
+    //  this.ipMapService.getIpAddress().subscribe((res:any)=>{
+    //    this.clientIP=res.ip
+
+    
+//    }
+
+//    
+//    }
+// }
+
 };
