@@ -1,5 +1,55 @@
-<div class="search-form">
-    Search IP Address:<input type="text" name="IpSearch">
-    <button (click)="getLocation(IpSearch.value)">Search</button>
-    
+<!-- <div class="search-form">
+  <form (ngSubmit)="search(ip)">
+    Search IP Address:<input [(ngModel)]="ip" type="text" />
+    <button type="submit">Search</button>
+  </form>
+</div> -->
+
+<!-- <form (submit)="search(ipToSearch.value)">
+  <div class="search-form">
+    <label for="ipToSearch">IP Address:</label>
+    <input #ipToSearch type="text" (keyup.enter)="search(ipToSearch.value)" />
+  </div>
+  <button (click)="search(ipToSearch.value)">Submit</button>
+</form> -->
+
+
+<form (submit)="search(ipToSearch.value)">
+  <div class="form-group">
+    <label for="ipToSearch">IP Address:</label>
+    <input #ipToSearch ngModel name="ipToSearch" id="ipToSearch" type="text" class="form-control" />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+
+<!-- <form [formGroup]='rForm' >
+    <div class="rForm">
+    <div class="rForm-wrap">
+        <input 
+            (keyup.enter)="shortenUrl(url.value)"
+            [ngClass]="url.touched && !url.valid ? 'alert-form' : 'form-ready'"
+            formControlName="url" 
+            type="text"
+            id="url"
+            class="form-control"
+            placeholder="Shorten a link here...">
+        <div *ngIf="url.touched && !url.valid" class="alert">
+            <div *ngIf="url.errors.required">Please add a link</div>
+            <div *ngIf="url.errors.pattern">Please enter valid link</div>
+        </div>
+    </div>
+    <button (click)="shortenUrl(url.value)" class="roundedBtn-2">Shorten it!</button>
 </div>
+</form> -->
+
+
+<!-- 
+<div class="search-form">
+	<app-orbit-list [satellites]="displayList"></app-orbit-list>
+	Search: <input #searchTerm type="text" (keyup.enter)="search(searchTerm.value);" name="searchTerm"/>
+	<button (click)="search(searchTerm.value);">Search</button>
+</div> -->
